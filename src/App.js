@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import {Routes,BrowserRouter, Route} from 'react-router-dom'
+import Layout from "./Layout/Layout";
+import HomePage from "./pages/Home/HomePage";
+import { useEffect, useState } from "react";
+import DarkProvider from "./component/Context/DarkProvider";
+import Country from "./pages/country/Country";
+
 
 function App() {
+ 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  // <div className={theme}>
+     <BrowserRouter>
+     <DarkProvider>
+      <Layout>
+        <Routes>
+          
+           <Route path="/" element={<HomePage />} />
+          <Route path="/contry/:name" element={<Country/>} />
+          
+        </Routes>
+      </Layout>
+     </DarkProvider>
+      
+    </BrowserRouter>
+  // </div>
+   
   );
 }
 

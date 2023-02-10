@@ -1,0 +1,37 @@
+.mainNavigation {
+  width: 100%;
+  height: 4.5rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 2px 8px #ccc;
+
+  
+
+}
+.mainNavigation nav {
+  display: flex;
+  width: 100%;
+  max-width: 1170px;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+ 
+}
+.mainNavigation button{
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0px !important;
+ 
+}
+
+ @media screen and (max-width: 500px) {
+ 
+ .mainNavigation button{
+  font-size: 14px;
+}
+ .mainNavigation h3{
+  font-size: 18px;
+}
+}
